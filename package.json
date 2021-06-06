@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "TZ=UTC mocha -r ts-node/register ./src/__test__/setup.ts \"src/**/*.test.ts\"",
+    "test:watch": "TZ=UTC mocha --require ts-node/register --extensions ts --watch --watch-files src './src/__test__/setup.ts' './src/__test__/**/*.test.{ts,tsx}'",
     "build": "rm -rf ./dist && tsc"
   },
   "author": "",
